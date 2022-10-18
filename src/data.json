@@ -1,0 +1,164 @@
+[
+  {
+      "id": 1,
+      "title": "Rendering a list in a react",
+      "content": "Hello,\nIn this article, we will learn how to render lists in React.\nTo render the list, use the map function provided by the JavaScript array.",
+      "comments": [
+          {
+              "id": 11,
+              "content": "When I develop it, I think I use a lot of map functions😄"
+          },
+          {
+              "id": 12,
+              "content": "Now that I've applied it, the code is very simple"
+          },
+          {
+              "id": 13,
+              "content": "You have to put in the key"
+          },
+          {
+              "id": 14,
+              "content": "It feels like your productivity is going up"
+          },
+          {
+              "id": 15,
+              "content": "Thank you for the good article today!👍"
+          }
+      ]
+  },
+  {
+      "id": 2,
+      "title": "What is conditional rendering of a reaction?",
+      "content": "Hello,\nIn this article, we will learn about conditional rendering of the react.\nConditional rendering literally means rendering differently depending on the condition.",
+      "comments": [
+          {
+              "id": 21,
+              "content": "There was a way to use it like this!"
+          },
+          {
+              "id": 22,
+              "content": "Thank you for the good tip"
+          },
+          {
+              "id": 23,
+              "content": "I've always used ?, but now I'm going to use &&."
+          },
+          {
+              "id": 24,
+              "content": "Thank you for the easy explanation😁"
+          },
+          {
+              "id": 25,
+              "content": "I'll use it to the code right away!"
+          }
+      ]
+  },
+  {
+      "id": 3,
+      "title": "Shall we learn about React Hook?",
+      "content": "Hello,\nIn this article, we will learn about React's Hook.\nHook interrupts the flow of the functional components of the react and uses them to handle various tasks.",
+      "comments": [
+          {
+              "id": 31,
+              "content": "It was a difficult concept, but I think it was organized a little after reading the article."
+          },
+          {
+              "id": 32,
+              "content": "I was wondering what Hook was doing, and it was like this. Thank you for the information."
+          },
+          {
+              "id": 33,
+              "content": "When I first heard the hook, it was so hard. Thank you!👍"
+          },
+          {
+              "id": 34,
+              "content": "I think I can use it well from now on"
+          },
+          {
+              "id": 35,
+              "content": "It is too hard😂"
+          }
+      ]
+  },
+  {
+      "id": 4,
+      "title": "Introducing the React Component Concept",
+      "content": "In this article, I would like to explain the components of React.\nI'm sure all of you who have studied react a little bit know that react is component-based\nSo what are the components?",
+      "comments": [
+          {
+              "id": 41,
+              "content": "It's great to be able to understand the confusing concepts"
+          },
+          {
+              "id": 42,
+              "content": "Thank you for an explanation of the components👏"
+          },
+          {
+              "id": 43,
+              "content": "I just used the components without really understanding them, and it's great that I can definitely get the concept!👍"
+          },
+          {
+              "id": 44,
+              "content": "React is based on components, so it's reusable and really good"
+          },
+          {
+              "id": 45,
+              "content": "React is the best!👍"
+          }
+      ]
+  },
+  {
+      "id": 5,
+      "title": "Introduction",
+      "content": "Hello,\nToday, I'm going to introduce you to the React lecture I made.\nThe name of the lecture is 'The First React'.\nIt's a lecture for beginners in React.",
+      "comments": [
+          {
+              "id": 51,
+              "content": "I love this lecture~!"
+          },
+          {
+              "id": 52,
+              "content": "It's good that even beginners can easily understand it😃"
+          },
+          {
+              "id": 53,
+              "content": "It's good to do it while following the practice is good"
+          },
+          {
+              "id": 54,
+              "content": "Thank you for the good lecture👍👍"
+          },
+          {
+              "id": 55,
+              "content": "Oh, there was a lecture like this"
+          }
+      ]
+  },
+  {
+      "id": 6,
+      "title": "Hello, I'm Soaple.",
+      "content": "Welcome to my blog.\nI'll try to post useful comments more often!",
+      "comments": [
+          {
+              "id": 61,
+              "content": "Please leave a lot of comments!👍"
+          },
+          {
+              "id": 62,
+              "content": "Wow, that's great"
+          },
+          {
+              "id": 63,
+              "content": "React is too hard😂"
+          },
+          {
+              "id": 64,
+              "content": "I'm enjoying your lecture!"
+          },
+          {
+              "id": 65,
+              "content": "Please continue to blog!!😀"
+          }
+      ]
+  }
+]
