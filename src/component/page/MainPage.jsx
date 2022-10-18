@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import PostList from '../list/PostList';
 import Button from '../ui/Button';
-import data from './data.json';
+import data from '../../data.json';
 
 const Wrapper = style.div`
   padding: 16px;
