@@ -136,8 +136,8 @@
   },
   {
       "id": 6,
-      "title": "Hello, I'm Soaple.",
-      "content": "Welcome to my blog.\nI'll try to post useful comments more often!",
+      "title": "Hello, This is the Mini-Blog for React.",
+      "content": "Welcome!!\nI'll try to post useful comments more often!",
       "comments": [
           {
               "id": 61,
