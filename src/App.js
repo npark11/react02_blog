@@ -17,7 +17,7 @@ function App(props) {
       <MainTitleText>Mini Blog</MainTitleText>
       <Routes>
         <Route index element={<MainPage />} />
-        <Route path="post-write" element={<PostWritePage />} />
+        <Route path="new-post" element={<PostWritePage />} />
         <Route path="post/:postId" element={<PostViewPage />} />
       </Routes>
     </BrowserRouter>

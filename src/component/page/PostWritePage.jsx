@@ -40,6 +40,7 @@ function PostWritePage(props) {
             setTitle(event.target.value);
           }}
         />
+
         <TextInput
           height={480}
           value={content}
@@ -47,12 +48,14 @@ function PostWritePage(props) {
             setContent(event.target.value);
           }}
         />
+
         <Button
           title="Writing"
           onClick={() => {
             navigate("/");
           }}
         />
+        
       </Container>
     </Wrapper>
   );
