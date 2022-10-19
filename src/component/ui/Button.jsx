@@ -14,3 +14,5 @@ function Button(props) {
 
   return <StyledButton onClick={onClick}>{title || "button"} </StyledButton>
 }
+
+export default Button;

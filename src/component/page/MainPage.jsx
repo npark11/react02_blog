@@ -5,7 +5,7 @@ import PostList from '../list/PostList';
 import Button from '../ui/Button';
 import data from '../../data.json';
 
-const Wrapper = style.div`
+const Wrapper = styled.div`
   padding: 16px;
   width: calc(100% - 32px);
   display: flex;
