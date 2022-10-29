@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import './navbar.css'
 
 export default function Navbar() {
+    const user = false;
   return (
     <div className="navbar">
         <div className="navbar__left">
@@ -12,16 +14,30 @@ export default function Navbar() {
 
         <div className="navbar__center">
             <ul className="navbar__list">
-                <div className="navbar__list__item">HOME</div>
-                <div className="navbar__list__item">ABOUT</div>
-                <div className="navbar__list__item">CONTACT</div>
-                <div className="navbar__list__item">WRITE</div>
-                <div className="navbar__list__item">LOGOUT</div>
+                <div className="navbar__list__item"><Link className="link" to="/">HOME</Link></div>
+                <div className="navbar__list__item"><Link className="link" to="/">ABOUT</Link></div>
+                <div className="navbar__list__item"><Link className="link" to="/">CONTACT</Link></div>
+                <div className="navbar__list__item"><Link className="link" to="/">WRITE</Link></div>
+                <div className="navbar__list__item">{user && "LOGOUT"}</div>
             </ul>
         </div>
 
         <div className="navbar__right">
-            <img className="navbar__img" src="https://picsum.photos/200" alt="" />
+            {
+                user ? (
+                    <img className="navbar__img" src="https://picsum.photos/200" alt="" />
+                ) : (
+                    <ul className="navbar__list">
+                        <li className="navbar__list__item">
+                            <Link className="link" to="/login">LOGIN</Link>
+                        </li>
+                        <li className="navbar__list__item">
+                            <Link className="link" to="/register">REGISTER</Link>
+                        </li>
+                    </ul>
+                )
+            }
+            
             <i className="navbar__searchIcon fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
