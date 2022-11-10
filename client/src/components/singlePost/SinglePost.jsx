@@ -17,7 +17,9 @@ export default function SinglePost() {
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/posts/" + path);
-      setPost(res.data)
+      setPost(res.data);
+      setTitle(res.data.title);
+      setDesc(res.data.desc);
     }
     getPost();
   }, [path]);
@@ -26,9 +28,20 @@ export default function SinglePost() {
     try {
         await axios.delete(`/posts/${post._id}`, {data: {username:user.username},
         });
-        window.location.replace("/");
+        setUpdateMode(false)
     } catch(err) {}
   };
+
+  const handleUpdate = async () => {
+    try {
+        await axios.put(`/posts/${post._id}`, {
+            username:user.username, 
+            title, 
+            desc,
+        });
+        window.location.reload();
+    } catch(err) {}
+  }
 
   return (
     <div className="singlePost">
@@ -39,10 +52,18 @@ export default function SinglePost() {
                     src={PF + post.photo}
                     alt="" 
                 />
-            )} {
-                updateMode ? <input type="text" value={post.title} /> : (
+            )} 
+            {updateMode ? (
+                <input 
+                    type="text" 
+                    value={title} 
+                    className="singlePost__titleInput" 
+                    autoFocus 
+                    onChange={(e)=>setTitle(e.target.value)}
+                />
+            ) : (
                 <h1 className="singlePost__title">
-                    {post.title}
+                    {title}
                     {post.username === user?.username &&
                     <div className="singlePost__edit">
                         <i className="singlePost__icon fa-regular   fa-pen-to-square" onClick={()=>setUpdateMode  (true)}></i>
@@ -61,9 +82,18 @@ export default function SinglePost() {
                 </span>
                 <span className="singlePost__date">{new Date(post.createdAt).toDateString}</span>
             </div>
-            <p className="singlePost__desc">
-                {post.desc}
-            </p>
+            {updateMode ? (
+                <textarea 
+                    className="singlePost__descInput" 
+                    value={desc} 
+                    onChange={(e)=>setDesc(e.target.value)} 
+                />
+            ) : (
+                <p className="singlePost__desc">{desc}</p>
+            )}
+            {updateMode && (
+                <button className="singlePost__button" onClick={handleUpdate}>Update</button>
+            )}
         </div>
     </div>
   )
