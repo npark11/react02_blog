@@ -5,6 +5,7 @@ import './navbar.css'
 
 export default function Navbar() {
   const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -30,24 +31,24 @@ export default function Navbar() {
         </div>
 
         <div className="navbar__right">
-            {
-                user ? (
-                    <img 
-                        className="navbar__img" 
-                        src={user.profilePic}
-                        alt="" 
+            {user ? (
+            <Link to="/settings">
+                <img 
+                    className="navbar__img" 
+                    src={PF + user.profilePic}
+                    alt="" 
                     />
-                ) : (
-                    <ul className="navbar__list">
-                        <li className="navbar__list__item">
-                            <Link className="link" to="/login">LOGIN</Link>
-                        </li>
-                        <li className="navbar__list__item">
-                            <Link className="link" to="/register">REGISTER</Link>
-                        </li>
-                    </ul>
-                )
-            }
+            </Link>
+            ) : (
+                <ul className="navbar__list">
+                    <li className="navbar__list__item">
+                        <Link className="link" to="/login">LOGIN</Link>
+                    </li>
+                    <li className="navbar__list__item">
+                        <Link className="link" to="/register">REGISTER</Link>
+                    </li>
+                </ul>
+            )}
             
             <i className="navbar__searchIcon fa-solid fa-magnifying-glass"></i>
         </div>
