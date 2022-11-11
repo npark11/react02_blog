@@ -29,7 +29,9 @@ export default function Write() {
     try {
       const res = await axios.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
-    } catch(err) {}
+    } catch(err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -41,7 +43,7 @@ export default function Write() {
             alt="" 
             />
         )}
-        <form action="" className="write__form" onSubmit={handleSubmit}>
+        <form className="write__form" onSubmit={handleSubmit}>
             <div className="write__formGroup">
                 <label htmlFor="fileInput">
                     <i className="write__icon fa-solid fa-plus"></i>

@@ -4,6 +4,7 @@ import { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
 import axios from 'axios';
 
+
 export default function Settings() {
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
@@ -12,7 +13,7 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
   
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/";
+  // const PF = "http://localhost:5000/images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +32,9 @@ export default function Settings() {
         updatedUser.profilePic = filename;
         try {
           await axios.post("/upload", data);
-        } catch(err) {}
+        } catch(err) {
+          console.log(err);
+        }
     }
     try {
       const res = await axios.put("/users/" + user._id, updatedUser);
@@ -47,13 +50,18 @@ export default function Settings() {
       <div className="settings_wrapper">
         <div className="settings__title">
           <span className="settings__title__update">Update Your Account</span>
-          <span className="settings__title__delete">Delete Account</span>
+          <button 
+            className="settings__title__delete" 
+            style={{border: "none"}} 
+          >
+            Delete Account
+          </button>
         </div>
         <form className="settings_form" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settings__pp">
             <img 
-              src={file ? URL.createObjectURL(file) : PF + user.profilePic}
+              src="https://picsum.photos/id/660/100/100"
               alt="" 
             />
             <label htmlFor="fileInput">

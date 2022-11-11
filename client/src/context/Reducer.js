@@ -41,6 +41,12 @@ const Reducer = (state, action) => {
                 isFetching: false,
                 error: true
             };
+        case "DELETE_SUCCESS":
+            return{
+                user: action.payload,
+                isFetching: false,
+                error: false
+            };
         default:
             return state;
     }

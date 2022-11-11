@@ -5,7 +5,6 @@ import './navbar.css'
 
 export default function Navbar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -25,7 +24,7 @@ export default function Navbar() {
                 <div className="navbar__list__item"><Link className="link" to="/">HOME</Link></div>
                 <div className="navbar__list__item"><Link className="link" to="/">ABOUT</Link></div>
                 <div className="navbar__list__item"><Link className="link" to="/">CONTACT</Link></div>
-                <div className="navbar__list__item"><Link className="link" to="/">WRITE</Link></div>
+                <div className="navbar__list__item"><Link className="link" to="/write">WRITE</Link></div>
                 <div className="navbar__list__item" onClick={handleLogout}>{user && "LOGOUT"}</div>
             </ul>
         </div>
@@ -35,7 +34,7 @@ export default function Navbar() {
             <Link to="/settings">
                 <img 
                     className="navbar__img" 
-                    src={PF + user.profilePic}
+                    src="https://picsum.photos/id/660/100/100"
                     alt="" 
                     />
             </Link>

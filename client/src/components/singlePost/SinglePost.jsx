@@ -29,7 +29,9 @@ export default function SinglePost() {
         await axios.delete(`/posts/${post._id}`, {data: {username:user.username},
         });
         setUpdateMode(false)
-    } catch(err) {}
+    } catch(err) {
+        console.log(err);
+    }
   };
 
   const handleUpdate = async () => {
